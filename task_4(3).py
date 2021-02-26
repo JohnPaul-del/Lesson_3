@@ -1,6 +1,12 @@
 
 
 def lettername(*list_of_names):
+    """
+    The function creates the dictionary from list of first and last names of employees by first letters
+    :param list_of_names: list of data of employees
+    :return: dictionary with sorting
+    """
+
     res_dict = {}
     list_of_names = sorted(list_of_names)
     for st in list_of_names:
