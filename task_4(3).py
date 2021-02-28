@@ -9,15 +9,15 @@ def lettername(*list_of_names):
 
     res_dict = {}
     list_of_names = sorted(list_of_names)
-    for st in list_of_names:
-        first_n, last_n = st.split()
+    for names in list_of_names:
+        first_n, last_n = names.split()
         lname_dict = res_dict.get(last_n[0])
         if lname_dict is None:
             lname_dict = {}
         fname_dict = lname_dict.get(first_n[0])
         if fname_dict is None:
             fname_dict = []
-        fname_dict.append(st)
+        fname_dict.append(names)
         lname_dict.setdefault(first_n[0], fname_dict)
         res_dict.setdefault(last_n[0], lname_dict)
 
